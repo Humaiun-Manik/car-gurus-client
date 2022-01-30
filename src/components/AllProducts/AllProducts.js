@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
-import './Services.css';
+import './AllProducts.css';
 
-const Services = () => {
+const AllProducts = () => {
 
     const { services, handleBuy } = useAuth();
 
@@ -11,11 +11,11 @@ const Services = () => {
         <div id='service'>
             <Container>
                 <div className='text-center my-5 pt-5 section-title'>
-                    <h1>Our Products</h1>
+                    <h1>All Products</h1>
                 </div>
                 <div>
                     <Row xs={1} md={3} className="g-4">
-                        {services.slice(0, 6).map((service, index) => <Col key={service._id}>
+                        {services.map((service, index) => <Col key={service._id}>
                             <Card className='single_service'>
                                 <Card.Img className='img-fluid service_img' variant="top" src={service?.img} />
                                 <Card.Body className='p-4 pb-3'>
@@ -38,4 +38,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default AllProducts;

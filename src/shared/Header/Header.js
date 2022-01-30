@@ -23,7 +23,7 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto align-items-center menu-items">
                             <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                            <Nav.Link to="/home#top-deals">TopDeals</Nav.Link>
+                            <Nav.Link as={Link} to="/allProducts">All Products</Nav.Link>
                             {/* <Nav.Link to="/home#gallery">Gallery</Nav.Link>
                             <Nav.Link as={Link} to="/order">MyOrder</Nav.Link> */}
                             {/* {
