@@ -1,0 +1,45 @@
+#service{
+    padding-top: 20px;
+}
+.single_service{
+    border: none !important;
+    border-radius: 5px;
+    box-shadow: 0px 0px 28px 7px rgba(227,220,220,0.5);
+    -webkit-box-shadow: 0px 0px 28px 7px rgba(227,220,220,0.5);
+    -moz-box-shadow: 0px 0px 28px 7px rgba(227,220,220,0.5);
+}
+.service_img{
+    height: 250px !important;
+}
+.single_service:hover .service_img{
+    opacity: 0.7;
+}
+.service_hover{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+.service_hover h5{
+    margin-bottom: 0;
+}
+.rating{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.rating p{
+    margin: 0;
+}
+.duration{
+    font-weight: 700;
+    display: block;
+}
+.book_btn{
+    margin-top: 20px;
+    padding: 10px 30px !important;
+    font-weight: 600 !important;
+    color: #f8f8f8;
+    background: rgb(240,88,66);
+    background: linear-gradient(90deg, rgba(240,88,66,1) 0%, rgba(234,51,72,1) 100%);
+    border: none !important;
+}
