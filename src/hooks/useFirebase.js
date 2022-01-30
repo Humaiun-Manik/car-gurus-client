@@ -1,19 +1,22 @@
 import { useEffect, useState } from "react";
 import initializefirebase from "./../firebase/firebase.init";
 import { getAuth, createUserWithEmailAndPassword, signOut, onAuthStateChanged, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, updateProfile } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 initializefirebase();
 
 const provider = new GoogleAuthProvider();
 
 const useFirebase = () => {
+
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
     const [admin, setAdmin] = useState(false);
     const auth = getAuth();
+    const path = useNavigate();
 
-    const registerUser = (email, password, name, history) => {
+    const registerUser = (email, password, name) => {
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
@@ -29,21 +32,20 @@ const useFirebase = () => {
                 }).then(() => {
                 }).catch((error) => {
                 });
-                history.replace('/Dashboard');
+                path('/dashboard');
             })
             .catch((error) => {
                 setError(error.message);
                 console.log(error);
             })
             .finally(() => setIsLoading(false));
-    }
+    };
 
-    const loginUser = (email, password, location, history) => {
+    const loginUser = (email, password, redirect_url) => {
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                const destination = location?.state?.from || '/Dashboard';
-                history.replace(destination);
+                path(redirect_url);
                 setError('');
             })
             .catch((error) => {
@@ -61,7 +63,6 @@ const useFirebase = () => {
             })
             .finally(() => setIsLoading(false))
     }
-
     useEffect(() => {
         fetch(`https://glacial-ridge-81046.herokuapp.com/users/${user.email}`)
             .then(res => res.json())

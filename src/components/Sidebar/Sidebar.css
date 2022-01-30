@@ -1,0 +1,38 @@
+.sidebar{
+    height: 670px;
+    width: 300px;
+    background: #314051;
+    margin-top: -670px;
+}
+.sidebar img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.user_name{
+    display: flex;
+    justify-content: center;
+}
+.user_name h4{
+    color: #00A0DC;
+    margin-top: 20px;
+    width: 230px;
+    border-bottom: 1px solid #F3363F;
+}
+ul{
+    padding-left: 0px !important;
+}
+ul li{
+    list-style: none;
+    margin-top: 20px;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+ul li a:hover{
+    color: #00A0DC;
+}
