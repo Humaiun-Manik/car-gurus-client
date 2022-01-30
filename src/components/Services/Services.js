@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import useAuth from '../../hooks/useAuth';
+import './Services.css';
 
 const Services = () => {
 
@@ -36,17 +38,17 @@ const Services = () => {
                 </div>
                 <div>
                     <Row xs={1} md={3} className="g-4">
-                        {packages.map(pack => <Col key={pack._id}>
+                        {services.map((service, index) => <Col key={service._id}>
                             <Card className='single_service'>
-                                <Card.Img className='img-fluid service_img' variant="top" src={pack.photos.thumbnail} />
+                                <Card.Img className='img-fluid service_img' variant="top" src={service?.img} />
                                 <Card.Body className='p-4 pb-3'>
                                     <Card.Title className='service_hover w-100'>
-                                        <div>
-                                            <h5>{pack.title}</h5>
-                                        </div>
+                                        <h4 className="card-title">{service?.name}</h4>
                                     </Card.Title>
-                                    <Card.Text>
-                                        <button href="#" className="btn btn-outline-primary" onClick={() => handleBuy(index)} >Buy Now</button>
+                                    <Card.Text className="card-text">
+                                        <p>{service?.description.slice(0, 158)}</p>
+                                        <h5>Price: {service?.Price} TK</h5>
+                                        <Button onClick={() => handleBuy(index)} className='book_btn'>Buy Now</Button>
                                     </Card.Text>
                                 </Card.Body>
                             </Card>

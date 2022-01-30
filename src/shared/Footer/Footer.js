@@ -4,12 +4,11 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <div className="footer text-center">
+        <div className="footer text-center mt-5">
             <div className="footer-menu">
                 <Link to="/Home">
                     Home
                 </Link>
-
                 <Link to="/Register">
                     Register
                 </Link>
