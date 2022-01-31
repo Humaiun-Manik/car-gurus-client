@@ -15,7 +15,7 @@ const Banner = () => {
             </Card.Title>
             <Card.Text>
               <p>
-                It is a beautiful day in this neighborhood a beautiful day for a neighbor would you be mine could you be mine its a neighborly day in this beautywood It is a beautiful day in this neighborhood a beautiful day for a neighbor would you be mine could you be mine its a neighborly day in this beautywood is neighborhood a beautiful day for a would you be mine could you be mine its a neighborly day.
+                It is a beautiful day in this neighborhood a beautiful day for a neighbor would you be mine could you be mine its a neighborly day in this beautywood It is a beautiful day in this neighborhood a beautiful day for a neighbor would you be mine could you be mine its a neighborly day in this beauty wood is neighborhood a beautiful day for a would you be mine could you be mine its a neighborly day.
               </p>
             </Card.Text>
           </div>
