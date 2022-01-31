@@ -6,10 +6,10 @@ const Footer = () => {
     return (
         <div className="footer text-center">
             <div className="footer-menu">
-                <Link to="/Home">
+                <Link to="/home">
                     Home
                 </Link>
-                <Link to="/Register">
+                <Link to="/register">
                     Register
                 </Link>
             </div>

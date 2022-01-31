@@ -50,7 +50,7 @@ const useFirebase = () => {
                 setError(error.message);
             })
             .finally(() => setIsLoading(false));
-    }
+    };
 
     const signInWithGoogle = () => {
         setIsLoading(true);
@@ -60,7 +60,8 @@ const useFirebase = () => {
                 setUser(result.user)
             })
             .finally(() => setIsLoading(false))
-    }
+    };
+
     useEffect(() => {
         fetch(`https://glacial-ridge-81046.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
@@ -73,7 +74,7 @@ const useFirebase = () => {
                 setUser({});
             })
             .finally(() => setIsLoading(false))
-    }
+    };
 
     useEffect(() => {
         const unSubscribed = onAuthStateChanged(auth, (user) => {
@@ -96,8 +97,8 @@ const useFirebase = () => {
                 'content-type': 'application/json',
             },
             body: JSON.stringify(user)
-        })
-    }
+        });
+    };
 
     return {
         user,
@@ -109,7 +110,7 @@ const useFirebase = () => {
         logOut,
         isLoading,
         error
-    }
-}
+    };
+};
 
 export default useFirebase;

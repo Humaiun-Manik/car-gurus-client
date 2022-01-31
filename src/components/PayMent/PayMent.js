@@ -4,7 +4,6 @@ const PayMent = () => {
     return (
         <div >
             <img src={payment} width="100%" />
-
         </div>
     );
 };

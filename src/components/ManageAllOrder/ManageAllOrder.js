@@ -23,27 +23,15 @@ const ManageAllOrder = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
                     if (data.deletedCount) {
                         alert('Order SuccessFully Deleted');
                         const remaining = allOrders.filter(allOrders => allOrders._id !== id);
                         setAllOrders(remaining);
                     }
-                })
-        }
+                });
+        };
+    };
 
-        //     const handleStatus = (id) =>{
-        //       const Status = {Status}
-        //       fetch('http://localhost:5000/users',{
-        //     method : 'PUT',
-        //     headers :{
-        //         'content-type' : 'application/json',
-        //     },
-        //     body: JSON.stringify(Status)
-        // })
-        //     }
-
-    }
     return (
         <div>
             <h1 className="Manageallorder-h1 text-success">Manage Order:{allOrders.length}</h1>

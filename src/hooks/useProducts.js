@@ -32,7 +32,7 @@ const useProducts = () => {
         } else {
             path('/login');
         }
-    }
+    };
 
     return { services, handleBuy };
 };

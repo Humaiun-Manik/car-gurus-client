@@ -1,6 +1,6 @@
 import { Alert } from '@mui/material';
 import React, { useState } from 'react';
-import './MakeAdmin.css'
+import './MakeAdmin.css';
 
 const MakeAdmin = () => {
 
