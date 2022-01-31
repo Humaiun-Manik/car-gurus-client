@@ -1,8 +1,6 @@
 .sidebar{
-    height: 670px;
-    width: 300px;
+    height: 100%;
     background: #314051;
-    margin-top: -670px;
 }
 .sidebar img{
     width: 150px;

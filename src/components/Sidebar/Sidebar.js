@@ -17,10 +17,11 @@ const Sidebar = () => {
             <ul>
 
                 {admin && <div>
-                    <li><Link to="/MakeAdmin">Add Admin</Link></li>
-                    <li><Link to="/ManageAllOrder">Manage All Order</Link></li>
-                    <li><Link to="/AddService">Add Service</Link></li>
-                </div>}
+                    <li><Link to="/makeAdmin">Add Admin</Link></li>
+                    <li><Link to="/manageAllOrder">Manage All Order</Link></li>
+                    <li><Link to="/addService">Add Service</Link></li>
+                </div>
+                }
                 <li><Link to="/myOrder">My Order</Link></li>
 
                 <li><Link to="/addReview">Add Review</Link></li>

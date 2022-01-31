@@ -5,31 +5,8 @@
     display: flex;
     justify-content: center;
     padding: 20px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     align-items: center;
     color: white;
     background-color: #314051;
-}
-.dashboard-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-.car{
-    height: 670px;
-    margin-left: 300px;
-    overflow: hidden;
-}
-.username {
-    margin-left: 300px;
-    margin-top: -10px;
-}
-.card_body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-.card_body h4{
-    margin-left: 20px;
 }

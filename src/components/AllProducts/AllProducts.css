@@ -1,16 +1,16 @@
 #service{
-    padding-top: 20px;
+    padding: 50px 0;
 }
 .section-title h1{
     font-size: 58px;
     margin-bottom: 50px;
 }
 .single_service{
-    border: none !important;
-    border-radius: 5px;
-    box-shadow: 0px 0px 28px 7px rgba(227, 220, 220, 0.5);
-    -webkit-box-shadow: 0px 0px 28px 7px rgba(227,220,220,0.5);
-    -moz-box-shadow: 0px 0px 28px 7px rgba(227,220,220,0.5);
+    border: 1px solid #02A0DB !important;
+    transition: 0.5s;
+}
+.single_service:hover{
+    border: 1px solid #f05842 !important;
 }
 .service_img{
     height: 300px !important;

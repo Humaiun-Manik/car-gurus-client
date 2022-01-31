@@ -22,7 +22,6 @@ const useFirebase = () => {
             .then((userCredential) => {
                 setError('');
                 const newUser = { email, displayName: name };
-                console.log(newUser);
                 setUser(newUser);
                 // save user to the database
                 saveUser(email, name, 'POST');
@@ -36,7 +35,6 @@ const useFirebase = () => {
             })
             .catch((error) => {
                 setError(error.message);
-                console.log(error);
             })
             .finally(() => setIsLoading(false));
     };
@@ -88,7 +86,7 @@ const useFirebase = () => {
             setIsLoading(false);
         });
         return () => unSubscribed;
-    }, [])
+    }, []);
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };

@@ -1,0 +1,12 @@
+.makeadmin-title{
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+}
+.makeadmin{
+    background: url(../../assets/images/bannerbg.jpg);
+    width:100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 80px;
+}

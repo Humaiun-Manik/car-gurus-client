@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import login from './../../assets/images/login.jpg';
+import login from './../../assets/images/login-img.jpg';
 import './Login.css';
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import useAuth from './../../hooks/useAuth';
 import { Col, Row } from 'react-bootstrap';
+import google from './../../assets/images/google.png'
 
 const googleProvider = new GoogleAuthProvider();
 
@@ -18,12 +19,6 @@ const Login = () => {
     const location = useLocation();
     const redirect_url = location?.state?.from?.pathname || '/dashboard';
     const path = useNavigate();
-
-
-    /*  const location = useLocation();
-     const history = useHistory();
-     const redirect_url = location.state?.from || '/Dashboard';
-     console.log('came from', location.state?.from); */
 
     const handleGoogleSignIn = () => {
         const auth = getAuth();
@@ -56,29 +51,30 @@ const Login = () => {
     }
 
     return (
-        <div >
-            <div className="login">
-                <Row>
-                    <Col sm={12} md={6}>
-                        <img className='img-fluid w-100' src={login} alt="login-img" />
-                        {/* <img style={{ width: '50%' }} src={login} /> */}
-                    </Col>
-                    <Col sm={12} md={6}>
-                        <div className="login-form">
-                            <h1 style={{ color: 'white' }}>Login</h1>
-                            <form onSubmit={handleLogin}>
-                                <input type="email" placeholder="Enter your email" name="email" onChange={handleOnChange} /><br />
-                                <input type="password" placeholder="Password" name="password" onChange={handleOnChange} /><br />
-                                <input type="submit" value="Login" className="btn btn-primary" />
-                            </form>
-                            <button onClick={handleGoogleSignIn} class="btn btn-primary buttongoogle">  Google Sign In</button><br />
-                            <Link style={{ textDecoration: 'none', color: 'white' }} to="/register">
-                                Do you New User?Please Register
-                            </Link>
-                        </div>
-                    </Col>
-                </Row>
-            </div>
+        <div className="login">
+            <Row>
+                <Col md={2}></Col>
+                <Col sm={12} md={4}>
+                    <img className='img-fluid w-100' src={login} alt="login-img" />
+                </Col>
+                <Col sm={12} md={4}>
+                    <div className="login-form text-center">
+                        <h1>Login</h1>
+                        <form onSubmit={handleLogin}>
+                            <input type="email" placeholder="Enter your email" name="email" onChange={handleOnChange} /><br />
+                            <input type="password" placeholder="Password" name="password" onChange={handleOnChange} /><br />
+                            <input type="submit" value="Login" className="btn btn-primary" />
+                        </form>
+                        <button className='google-btn' onClick={handleGoogleSignIn}>
+                            <img src={google} alt="google" /> <span>Google Sign In</span>
+                        </button><br />
+                        <Link className='redirect' to="/register">
+                            Do you New User?Please Register!!
+                        </Link>
+                    </div>
+                </Col>
+                <Col md={2}></Col>
+            </Row>
         </div>
     );
 };

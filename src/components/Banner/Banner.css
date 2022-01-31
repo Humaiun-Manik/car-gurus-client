@@ -1,13 +1,23 @@
-/* .banner{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-gap: 150px;
-    margin-top: 50px;
+.banner_img{
+    opacity: 0.4;
 }
-.Banner-text{
-     margin-top: 80px; 
-     padding-left: 50px;
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.banner-img img{
-    width: 80%;
-} */
+.banner-text{
+    width: 70%;
+    text-align: center;
+}
+.banner-text h1{
+    font-size: 54px;
+    font-weight: 600;
+    margin: 20px 0;
+    margin-top: 100px;
+}
+.banner-text p{
+    color: lightgray !important;
+    font-size: 20px;
+    font-weight: 500;
+}
