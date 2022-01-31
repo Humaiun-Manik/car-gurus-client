@@ -9,6 +9,9 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import PrivateRoute from './privateRoute/PrivateRoute';
 import Dashboard from './components/Dashboard/Dashboard';
+import MyOrder from './components/MyOrder/MyOrder';
+import AddReview from './components/AddReview/AddReview';
+import PayMent from './components/PayMent/PayMent';
 
 function App() {
   return (
@@ -20,9 +23,24 @@ function App() {
         <Route path="allProducts" element={<AllProducts />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
-        <Route path="/dashboard" element={
+        <Route path="dashboard" element={
           <PrivateRoute>
             <Dashboard />
+          </PrivateRoute>
+        } />
+        <Route path="myOrder" element={
+          <PrivateRoute>
+            <MyOrder />
+          </PrivateRoute>
+        } />
+        <Route path="addReview" element={
+          <PrivateRoute>
+            <AddReview />
+          </PrivateRoute>
+        } />
+        <Route path="payMent" element={
+          <PrivateRoute>
+            <PayMent />
           </PrivateRoute>
         } />
       </Routes>

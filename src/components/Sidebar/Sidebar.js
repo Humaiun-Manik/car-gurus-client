@@ -21,12 +21,12 @@ const Sidebar = () => {
                     <li><Link to="/ManageAllOrder">Manage All Order</Link></li>
                     <li><Link to="/AddService">Add Service</Link></li>
                 </div>}
-                <li><Link to="/MyOrder">My Order</Link></li>
+                <li><Link to="/myOrder">My Order</Link></li>
 
-                <li><Link to="/AddReview">Add Review</Link></li>
+                <li><Link to="/addReview">Add Review</Link></li>
 
-                <li><Link to="/AllProducts">All Products</Link></li>
-                <li><Link to="/PayMent">Pay Ment</Link></li>
+                <li><Link to="/allProducts">All Products</Link></li>
+                <li><Link to="/payMent">Pay Ment</Link></li>
             </ul>
 
         </div>

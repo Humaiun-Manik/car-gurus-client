@@ -80,7 +80,6 @@ const useFirebase = () => {
     useEffect(() => {
         const unSubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
-                console.log('Inside State Change', user)
                 setUser(user);
             }
             else {

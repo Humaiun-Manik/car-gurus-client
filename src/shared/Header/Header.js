@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from './../../hooks/useAuth';
 import logo from './../../assets/images/cta-logo.png';
@@ -12,7 +12,7 @@ const Header = () => {
 
     return (
         <>
-            <Navbar className='px-4' collapseOnSelect expand="lg" bg="light" variant="light" fixed='top'>
+            <Navbar className='px-5 py-3 nav_bar' collapseOnSelect expand="lg" variant="light" fixed='top'>
                 <Navbar.Brand href="#home" className='nav_brand'>
                     <img
                         alt="logo"
@@ -41,7 +41,6 @@ const Header = () => {
                                 <Nav.Link className='login_btn' as={Link} to="/login">LOGIN</Nav.Link>
                             )
                         }
-
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

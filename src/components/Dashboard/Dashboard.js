@@ -6,9 +6,6 @@ import car from './../../assets/images/car.jpg';
 
 const Dashboard = () => {
 
-    const { allContext } = useAuth();
-    const { user } = allContext;
-
     return (
         <div className="dashboard">
             <h1>Dashboard</h1>
