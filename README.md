@@ -1,19 +1,15 @@
 # Car Gurus Sales Websites
-#Live Link :https://car-gurus-71cfc.web.app/
 
-Technology used in this site:
+### Description
 
-.React js
-.React Router
-.Bootstrap and Material Ui (CSS FrameWork)
-.React Rating
-.Firebase Authentication
-#
-What can you do by this Website:
+* It's a single page website by using rect,nodejs etc.
+* Its about selling different category car.
+* Users can ordered car from this website.
+* users will be able to review for each car.
+* Also they can be collect info about our cars.
+* users can orderd bike by login and add to cart, then proceed to checkout.
+* Admin can be update,delete,add products and confirmed ordered.
+* Admin also can make an admin from users.
+* For testing purpose ,admin user is : admin@admin.com and password: 123456
 
-.You can Create Account by Using Email And Password
-.Sign In With Google Account
-.You can Order Products And Delete Order
-.You can Give Review by addreview option.
-.If You Admin You add admin in this site
-.You can add Products from admin Dashboard.
+### Live Website Link: https://car-gurus-71cfc.web.app/ 
